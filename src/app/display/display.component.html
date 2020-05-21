@@ -1,0 +1,34 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container">
+<div class="container">
+    <div class="row col-md-6 col-md-offset-2 custyle">
+    <table class="table table-striped custab">
+    <thead>
+        <tr>
+            <th>Transaction Reference</th>
+            <th>IBAN number</th>
+            <th>Start Balance</th>
+            <th>Mutation</th>
+            <th>Description</th>
+            <th>End Balance</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let statement of statement">
+            <td>{{statement.transactionReference}}</td>
+            <td>{{statement.iban}}</td>
+            <td>{{statement.startBalance}}</td>
+            <td>{{statement.mutation}}</td>
+            <td>{{statement.description}}</td>
+            <td>{{statement.endBalance}}</td>
+            <td class="text-center">
+                <!--<button class="btn btn-danger btn-xs" (click)="delteUser(user.id)"><span class="glyphicon glyphicon-remove"></span> Delete</button></td>-->
+          </tr>
+    </tbody>
+    </table>
+    </div>
+</div>
